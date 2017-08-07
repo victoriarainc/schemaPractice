@@ -6,15 +6,15 @@ const Schema = mongoose.Schema;
 // create a schema for a contact
 const itemSchema = new Schema({
   category: { type: String, required: true },
-  size: String,
-  count: String,
+  size: { type: String },
+  count: { type: String },
   price: { type: Number, required: true },
   custom: { type: Boolean, required: true },
   materials: [],
   description: {
-    color: String,
-    solid: Boolean,
-    shape: String,
+    color: { type: String },
+    solid: { type: Boolean },
+    shape: { type: String },
   }
 });
 

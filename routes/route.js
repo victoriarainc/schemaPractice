@@ -1,12 +1,16 @@
 const express = require('express');
 const routes = express.Router();
+const mongoose = require('mongoose');
 
 const Item = require('../models/inventory');
 
 routes.get('/', (req, res) => {
   Item.find()
     // then show my items
-    .then(items => res.render('listItems', { items: items }))
+    .then(items => {
+      console.log(items);
+      res.render('listItems', { items: items });
+    })
     // handle errors
     .catch(err => res.send('there was an error :('));
 });
@@ -22,6 +26,10 @@ routes.get('/itemForm', (req, res) => {
 });
 
 routes.post('/saveItem', (req, res) => {
+  //set a random number as the ID
+  if (!req.body.id) {
+    req.body.id = new mongoose.mongo.ObjectID();
+  }
   Item.findByIdAndUpdate(req.body.id, req.body, { upsert: true })
     .then(() => res.redirect('/'))
     // catch validation errors

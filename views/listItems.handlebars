@@ -1,0 +1,34 @@
+<h1>Inventory</h1>
+
+
+<table border="1">
+  <tr>
+    <th>
+      Category
+    </th>
+    <th>
+      Size
+    </th>
+    <th>
+      Count
+    </th>
+    <th>
+      Price
+    </th>
+    <th>
+      Customizable
+    </th>
+  </tr>
+
+  {{#items}}
+  <tr>
+    <td><a href="/itemForm?id={{_id}}">{{category}}</a></td>
+    <td>{{size}}</td>
+    <td>{{count}}</td>
+    <td>{{price}}</td>
+    <td>{{custom}}</td>
+    <td><a href="/deleteItem/?id={{_id}}">Delete</a></td>
+  </tr>
+  {{/items}}
+
+</table>
