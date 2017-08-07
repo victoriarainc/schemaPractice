@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/victoriarainc/schemaPractice/issues"
   },
-  "homepage": "https://github.com/victoriarainc/schemaPractice#readme"
+  "homepage": "https://github.com/victoriarainc/schemaPractice#readme",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.11.6"
+  }
 }

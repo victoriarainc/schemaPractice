@@ -1,7 +1,6 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
-const routes = require('./routes/routes');
 // mongoose. not a mammal
 const mongoose = require('mongoose');
 // bluebird is a promise library. checkout bluebirdjs.org
@@ -26,7 +25,7 @@ app.use('/', routes);
 
 mongoose
   // connect to mongo via mongoose
-  .connect('mongodb://localhost:27017/newdb', { useMongoClient: true })
+  .connect('mongodb://localhost:27017/inventory', { useMongoClient: true })
   // now we can do whatever we want with mongoose.
   // configure session support middleware with express-session
   .then(() => app.listen(3000, () => console.log('ready to roll!!')));
