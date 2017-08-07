@@ -1,6 +1,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
+const routes = require('./routes/route');
 // mongoose. not a mammal
 const mongoose = require('mongoose');
 // bluebird is a promise library. checkout bluebirdjs.org

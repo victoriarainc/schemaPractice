@@ -1,0 +1,32 @@
+<h1>Item Form</h1>
+
+<form action="/saveItem" method="post">
+  <label for="category">Category</label>
+  <input type="text" id="category" name="category" value="{{item.category}}" />
+  <div class="fieldError">{{errors.category.message}}</div>
+  <br />
+
+  <label for="size">Size</label>
+  <input type="text" id="size" name="size" value="{{item.size}}" />
+  <div class="fieldError">{{errors.size.message}}</div>
+  <br />
+
+  <label for="count">Count</label>
+  <input type="text" id="count" name="count" value="{{item.count}}" />
+  <br />
+
+  <label for="price">Price</label>
+  <input type="text" id="price" name="price" value="{{item.price}}" />
+  <br />
+
+  <label for="custom">Custom</label>
+  <input type="text" id="custom" name="custom" value="{{item.custom}}" />
+  <div class="fieldError">{{errors.mobilePhone.message}}</div>
+  <br />
+
+  {{#if contact._id}}
+    <input type="hidden" name="id" value="{{item._id}}" />
+  {{/if}}
+
+  <button class="button-primary">Save Item</button>
+</form>
