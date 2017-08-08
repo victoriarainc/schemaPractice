@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(214, 229, 255);
+  font-size: 23px;
+  font-family: monospace;
+}
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}

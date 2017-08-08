@@ -8,7 +8,6 @@ routes.get('/', (req, res) => {
   Item.find()
     // then show my items
     .then(items => {
-      console.log(items);
       res.render('listItems', { items: items });
     })
     // handle errors
@@ -26,9 +25,15 @@ routes.get('/itemForm', (req, res) => {
 });
 
 routes.post('/saveItem', (req, res) => {
+  console.log(req.body);
   //set a random number as the ID
   if (!req.body.id) {
     req.body.id = new mongoose.mongo.ObjectID();
+  }
+  if (req.body.custom) {
+    req.body.custom = true;
+  } else {
+    req.body.custom = false;
   }
   Item.findByIdAndUpdate(req.body.id, req.body, { upsert: true })
     .then(() => res.redirect('/'))

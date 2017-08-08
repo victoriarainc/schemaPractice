@@ -15,12 +15,12 @@
   <input type="text" id="count" name="count" value="{{item.count}}" />
   <br />
 
-  <label for="price">Price</label>
+  <label for="price">Price: $</label>
   <input type="text" id="price" name="price" value="{{item.price}}" />
   <br />
 
   <label for="custom">Customizable</label>
-  <input type="checkbox" id="custom" name="custom" value="{{item.custom}}" />
+  <input type="checkbox" id="custom" name="custom" value="true" {{#if item.custom}}checked{{/if}}/>
   <div class="fieldError">{{errors.custom.message}}</div>
   <br />
 

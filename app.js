@@ -1,16 +1,19 @@
+//PACKAGES
 const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const routes = require('./routes/route');
-// mongoose. not a mammal
 const mongoose = require('mongoose');
-// bluebird is a promise library. checkout bluebirdjs.org
 const bluebird = require('bluebird');
-// set mongoose's primise library to be bluebird
+
 mongoose.Promise = bluebird;
 
-// create express app
+//BOILERPLATE
+// for express
 const app = express();
+
+// for static sheets
+app.use(express.static('public'));
 
 // tell express to use handlebars
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
