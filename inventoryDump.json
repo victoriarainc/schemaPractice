@@ -1,1 +1,5 @@
-{"_id":{"$oid":"5988f359bce4f70e5c474155"},"__v":0,"category":"Envelope","size":"4-bar","count":"10","price":3,"custom":true}
+{"_id":{"$oid":"5988f359bce4f70e5c474155"},"__v":0,"category":"Envelope","size":"4-bar","count":"1","price":3,"custom":true,"materials":["paper","glue"],"description":{"color":"Pink","image":"print or solid","shape":""}}
+{"_id":{"$oid":"59890bddeaf8571232e2723b"},"__v":0,"category":"Envelope","size":"#1","count":"1","price":3,"custom":true,"materials":["paper"],"description":{"color":"Multi-colored","image":"print or solid","shape":""}}
+{"_id":{"$oid":"59890bfaeaf8571232e2723c"},"__v":0,"category":"Gift Tag Labels","size":"2.5\"","count":"5","price":2,"custom":true,"materials":["paper","watermark ink"],"description":{"color":"Multi-colored","image":"watermarked image","shape":"ovals"}}
+{"_id":{"$oid":"59890c2deaf8571232e2723d"},"__v":0,"category":"Typewriter Service","size":"4-Bar Letter","count":"1","price":5,"custom":true,"materials":["Smith-Corona"],"description":{"color":"Black Ink","image":"","shape":"Serif Font"}}
+{"_id":{"$oid":"598919e27f404014c7873af3"},"__v":0,"category":"Gift Tags","size":"Small","count":"5","price":1,"materials":["paper","twine"],"description":{"color":"Black","image":"pawprint","shape":"rectangles"},"custom":false}
