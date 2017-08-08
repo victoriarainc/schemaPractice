@@ -8,6 +8,10 @@ body {
   font-family: monospace;
 }
 
+span {
+  margin: 1% 0;
+}
+
 .container {
   display: flex;
   flex-flow: row wrap;

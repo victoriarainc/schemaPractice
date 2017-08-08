@@ -1,5 +1,4 @@
-<h1>Item Form</h1>
-
+<div class="wrapper">
 <form action="/saveItem" method="post">
   <label for="category">Category</label>
   <input type="text" id="category" name="category" value="{{item.category}}" />
@@ -24,6 +23,7 @@
   <input type="text" id="materials_{{@index}}" name="materials[{{@index}}]" value="{{.}}" />
   {{/item.materials}}
   <input type="text" id="materials" name="materials[]" value="" />
+  
   <label for="description">Description</label>
   <input type="text" id="description" name="description.color" value="{{item.description.color}}" placeholder="Color" />
   <input type="text" id="description" name="description.image" value="{{item.description.image}}" placeholder="Image" />
@@ -36,3 +36,4 @@
 
   <button class="button-primary">Save Item</button>
 </form>
+</div>

@@ -1,12 +1,12 @@
   {{#items}}
   <div class = "itemsList">
     <span><a href="/itemForm?id={{_id}}">{{category}}</a></span>
-    <span>{{size}}</span>
-    <span>{{count}}</span>
-    <span>${{price}}</span>
-    <span>{{custom}}</span>
-    <span>{{materials}}</span>
-    <span>{{description.color}} {{description.image}} {{description.shape}}</span>
+    <span>Size: {{size}}</span>
+    <span>Count: {{count}}</span>
+    <span>Price: ${{price}}</span>
+    <span>Customizable: {{custom}}</span>
+    <span>Materials: {{materials}}</span>
+    <span>Description: {{description.color}} {{description.image}} {{description.shape}}</span>
     <span><a href="/deleteItem/?id={{_id}}">Delete</a></span>
   </div>
   {{/items}}
