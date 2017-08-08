@@ -4,25 +4,31 @@
   <label for="category">Category</label>
   <input type="text" id="category" name="category" value="{{item.category}}" />
   <div class="fieldError">{{errors.category.message}}</div>
-  <br />
 
   <label for="size">Size</label>
   <input type="text" id="size" name="size" value="{{item.size}}" />
   <div class="fieldError">{{errors.size.message}}</div>
-  <br />
 
   <label for="count">Count</label>
   <input type="text" id="count" name="count" value="{{item.count}}" />
-  <br />
 
   <label for="price">Price: $</label>
   <input type="text" id="price" name="price" value="{{item.price}}" />
-  <br />
 
   <label for="custom">Customizable</label>
   <input type="checkbox" id="custom" name="custom" value="true" {{#if item.custom}}checked{{/if}}/>
   <div class="fieldError">{{errors.custom.message}}</div>
-  <br />
+
+  <label for="materials">Materials</label>
+  {{#item.materials}}
+  <input type="text" id="materials_{{@index}}" name="materials[{{@index}}]" value="{{.}}" />
+  {{/item.materials}}
+  <input type="text" id="materials" name="materials[]" value="" />
+  <label for="description">Description</label>
+  <input type="text" id="description" name="description.color" value="{{item.description.color}}" placeholder="Color" />
+  <input type="text" id="description" name="description.image" value="{{item.description.image}}" placeholder="Image" />
+  <input type="text" id="description" name="description.shape" value="{{item.description.shape}}" placeholder="Shape" />
+
 
   {{#if item._id}}
     <input type="hidden" name="id" value="{{item._id}}" />

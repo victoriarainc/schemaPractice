@@ -30,11 +30,16 @@ routes.post('/saveItem', (req, res) => {
   if (!req.body.id) {
     req.body.id = new mongoose.mongo.ObjectID();
   }
+  // Checking if the custom box was checked
   if (req.body.custom) {
     req.body.custom = true;
   } else {
     req.body.custom = false;
   }
+  // Make sure our materials don't contain any blank entries
+  req.body.materials = req.body.materials.filter((item) => {
+    return item != '';
+  })
   Item.findByIdAndUpdate(req.body.id, req.body, { upsert: true })
     .then(() => res.redirect('/'))
     // catch validation errors

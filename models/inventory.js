@@ -13,7 +13,7 @@ const itemSchema = new Schema({
   materials: [],
   description: {
     color: { type: String },
-    solid: { type: Boolean },
+    image: { type: String },
     shape: { type: String },
   }
 });

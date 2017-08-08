@@ -1,34 +1,12 @@
-<h1>Inventory</h1>
-
-
-<table>
-  <tr>
-    <th>
-      Category
-    </th>
-    <th>
-      Size
-    </th>
-    <th>
-      Count
-    </th>
-    <th>
-      Price
-    </th>
-    <th>
-      Customizable
-    </th>
-  </tr>
-
   {{#items}}
-  <tr>
-    <td><a href="/itemForm?id={{_id}}">{{category}}</a></td>
-    <td>{{size}}</td>
-    <td>{{count}}</td>
-    <td>${{price}}</td>
-    <td>{{custom}}</td>
-    <td><a href="/deleteItem/?id={{_id}}">Delete</a></td>
-  </tr>
+  <div class = "itemsList">
+    <span><a href="/itemForm?id={{_id}}">{{category}}</a></span>
+    <span>{{size}}</span>
+    <span>{{count}}</span>
+    <span>${{price}}</span>
+    <span>{{custom}}</span>
+    <span>{{materials}}</span>
+    <span>{{description.color}} {{description.image}} {{description.shape}}</span>
+    <span><a href="/deleteItem/?id={{_id}}">Delete</a></span>
+  </div>
   {{/items}}
-
-</table>

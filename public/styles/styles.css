@@ -10,6 +10,20 @@ body {
 
 .container {
   display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.itemsList {
+  display: flex;
   flex-flow: column wrap;
   align-items: center;
+  justify-content: center;
+  border: 1px solid purple;
+  background-color: lavender;
+  border-radius: 10px;
+  margin: 2%;
+  padding: 2%;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
